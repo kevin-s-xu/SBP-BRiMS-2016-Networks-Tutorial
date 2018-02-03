@@ -1,6 +1,24 @@
 # SBP-BRiMS 2016 Tutorial: Generative Models for Social Network Data
 This repository contains material from the [SBP-BRiMS 2016 tutorial on generative models for social network data](http://sbp-brims.org/2016/tutorial07/) by Kevin S. Xu and James R. Foulds.
 
+## Tutorial Abstract
+
+Due in part to the ubiquity of social network data today, interest in social network analysis has spread beyond its traditional home in the social sciences to many other disciplines including physics, computer science, statistics, and engineering. A topic of significant interest in social network analysis is the creation of statistical models for social network data. Many of these models are generative, which allows one to simulate random networks from a particular model. Additionally many models share a common structure: each vertex is assigned a set of latent or hidden attributes, and edges between vertices are generated with probability conditional on the hidden attributes of the vertices. These latent variables, which are automatically inferred from the network, can be valuable for understanding network structure with respect to sociological principles, and for making predictions about the network’s current and future state.
+
+In this tutorial, we cover four main classes of generative models for social network data, under which many of the commonly used statistical network models fall:
+
+- *Latent space models*, which generally assume latent continuous attributes for vertices where the probability of an edge between two vertices is given by a distance function applied to the attributes of the vertices.
+- *Block models*, which divide vertices into one of `k` latent classes where the probability of an edge between two vertices depends only on the classes of the vertices.
+- *Latent feature models*, which allow vertices to have arbitrarily many unique (typically binary) features, where the probability of an edge between two vertices is given by a weighted sum of the elements of their feature vectors.
+- *Mixed membership models*, in which each vertex has partial membership in their latent classes.
+
+We discuss some of the challenges when it comes to applying these types of generative models on social network data, including
+
+- Optimization methods to fit these generative models, which involve estimating the latent attributes of the vertices, in an optimal or near-optimal manner.
+- Simulation approaches for Bayesian inference in these models using Markov chain Monte Carlo.
+- Model selection and verification to validate a particular fit to a social network model.
+- Interpretation of model parameters and their relationship to social network structure.
+
 ## Contents
 
 - This README file
